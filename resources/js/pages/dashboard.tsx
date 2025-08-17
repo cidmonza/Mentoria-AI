@@ -1,7 +1,6 @@
 import AppLayout from '@/layouts/app-layout';
-import { type BreadcrumbItem } from '@/types';
+import { type BreadcrumbItem, type SharedData } from '@/types';
 import { Head, usePage } from '@inertiajs/react';
-import { PageProps } from '@inertiajs/react';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -10,7 +9,7 @@ const breadcrumbs: BreadcrumbItem[] = [
     },
 ];
 
-interface DashboardProps extends PageProps {
+interface DashboardProps extends SharedData {
     stats: {
         conversas_realizadas: number;
         perguntas_restantes: number;
